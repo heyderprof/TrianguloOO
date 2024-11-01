@@ -10,22 +10,24 @@ public class ProgramaPrincipal {
 	
 		Scanner sc = new Scanner(System.in);
 		
-		// Agora que a classe Triangulo está pronta, podemos
-		// instanciar um novo objeto do tipo triangulo:
+		// Agora que a classe Triangulo está pronta, 
+		// podemos instanciar um novo objeto do tipo triangulo:
 		// Triangulo nomeDoObjeto = new Triagulo();
 		
 		
 		// instanciando o objeto sem parametros
 		Triangulo trianguloA = new Triangulo();
 		
-		// como os atributos da classe Triangulo estao públicos
-		// conseguimos setar os valores diretamente
-		// nomeDoObjeto.atributo = valor;
+		// como os atributos da classe Triangulo estao PRIVADOS
+		// agora não é mais possível atribuir valor diretamente (nomeDoObjeto.atributo = valor;)
+		// precisamos utilizar os métodos getters e setters
 		
 		System.out.println("Digite a base do Triangulo A: ");
-		trianguloA.base = sc.nextDouble();
+		// utilizando o método setBase()
+		trianguloA.setBase(sc.nextDouble());
 		System.out.println("Digite a altura do Triangulo A: ");
-		trianguloA.altura = sc.nextDouble();
+		// utilizando o método setAltura()
+		trianguloA.setAltura(sc.nextDouble());
 		
 		// Utilizando o método que calcula a área para o objeto 1 (Triangulo A).
 		System.out.printf("Área do Triângulo A: %.2f%n", trianguloA.calcularArea());
